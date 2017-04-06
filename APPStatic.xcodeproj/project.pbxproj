@@ -16,6 +16,8 @@
 		13FF27BB1E514D460008C709 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 13FF27B91E514D460008C709 /* LaunchScreen.storyboard */; };
 		13FF27C61E514D460008C709 /* APPStaticTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 13FF27C51E514D460008C709 /* APPStaticTests.m */; };
 		13FF27D11E514D460008C709 /* APPStaticUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 13FF27D01E514D460008C709 /* APPStaticUITests.m */; };
+		13FF27E01E514F370008C709 /* AppModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 13FF27DF1E514F370008C709 /* AppModel.m */; };
+		13FF27E81E5153820008C709 /* AppInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 13FF27E71E5153820008C709 /* AppInfo.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +55,11 @@
 		13FF27CC1E514D460008C709 /* APPStaticUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = APPStaticUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		13FF27D01E514D460008C709 /* APPStaticUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = APPStaticUITests.m; sourceTree = "<group>"; };
 		13FF27D21E514D460008C709 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		13FF27DE1E514F370008C709 /* AppModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppModel.h; sourceTree = "<group>"; };
+		13FF27DF1E514F370008C709 /* AppModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppModel.m; sourceTree = "<group>"; };
+		13FF27E41E51501E0008C709 /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		13FF27E61E5153820008C709 /* AppInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppInfo.h; sourceTree = "<group>"; };
+		13FF27E71E5153820008C709 /* AppInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppInfo.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,16 +110,18 @@
 		13FF27A71E514D460008C709 /* APPStatic */ = {
 			isa = PBXGroup;
 			children = (
+				13FF27E51E5153650008C709 /* ApoInfo */,
+				13FF27E31E514F680008C709 /* View */,
+				13FF27E21E514F560008C709 /* Controller */,
+				13FF27E11E514F430008C709 /* Model */,
+				13FF27A81E514D460008C709 /* Supporting Files */,
 				13FF27AB1E514D460008C709 /* AppDelegate.h */,
 				13FF27AC1E514D460008C709 /* AppDelegate.m */,
-				13FF27AE1E514D460008C709 /* ViewController.h */,
-				13FF27AF1E514D460008C709 /* ViewController.m */,
 				13FF27B11E514D460008C709 /* Main.storyboard */,
 				13FF27B71E514D460008C709 /* Assets.xcassets */,
 				13FF27B91E514D460008C709 /* LaunchScreen.storyboard */,
 				13FF27BC1E514D460008C709 /* Info.plist */,
 				13FF27B41E514D460008C709 /* APPStatic.xcdatamodeld */,
-				13FF27A81E514D460008C709 /* Supporting Files */,
 			);
 			path = APPStatic;
 			sourceTree = "<group>";
@@ -121,6 +130,7 @@
 			isa = PBXGroup;
 			children = (
 				13FF27A91E514D460008C709 /* main.m */,
+				13FF27E41E51501E0008C709 /* PrefixHeader.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -141,6 +151,40 @@
 				13FF27D21E514D460008C709 /* Info.plist */,
 			);
 			path = APPStaticUITests;
+			sourceTree = "<group>";
+		};
+		13FF27E11E514F430008C709 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				13FF27DE1E514F370008C709 /* AppModel.h */,
+				13FF27DF1E514F370008C709 /* AppModel.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		13FF27E21E514F560008C709 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				13FF27AE1E514D460008C709 /* ViewController.h */,
+				13FF27AF1E514D460008C709 /* ViewController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		13FF27E31E514F680008C709 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		13FF27E51E5153650008C709 /* ApoInfo */ = {
+			isa = PBXGroup;
+			children = (
+				13FF27E61E5153820008C709 /* AppInfo.h */,
+				13FF27E71E5153820008C709 /* AppInfo.m */,
+			);
+			name = ApoInfo;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -282,6 +326,8 @@
 				13FF27B01E514D460008C709 /* ViewController.m in Sources */,
 				13FF27AD1E514D460008C709 /* AppDelegate.m in Sources */,
 				13FF27AA1E514D460008C709 /* main.m in Sources */,
+				13FF27E81E5153820008C709 /* AppInfo.m in Sources */,
+				13FF27E01E514F370008C709 /* AppModel.m in Sources */,
 				13FF27B61E514D460008C709 /* APPStatic.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -377,7 +423,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -419,7 +465,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -431,7 +477,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "";
 				DEVELOPMENT_TEAM = 622A9GB38Y;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = AppStatic/PrefixHeader.pch;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+					"SUPPORTS_UNDOCUMENTED_API=1",
+				);
 				INFOPLIST_FILE = APPStatic/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = lhp3851.APPStatic;
@@ -444,6 +498,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 622A9GB38Y;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = AppStatic/PrefixHeader.pch;
 				INFOPLIST_FILE = APPStatic/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = lhp3851.APPStatic;
@@ -520,6 +576,7 @@
 				13FF27D71E514D460008C709 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		13FF27D81E514D460008C709 /* Build configuration list for PBXNativeTarget "APPStaticTests" */ = {
 			isa = XCConfigurationList;
@@ -528,6 +585,7 @@
 				13FF27DA1E514D460008C709 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		13FF27DB1E514D460008C709 /* Build configuration list for PBXNativeTarget "APPStaticUITests" */ = {
 			isa = XCConfigurationList;
@@ -536,6 +594,7 @@
 				13FF27DD1E514D460008C709 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

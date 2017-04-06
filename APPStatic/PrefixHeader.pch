@@ -1,0 +1,30 @@
+//
+//  PrefixHeader.pch
+//  APPStatic
+//
+//  Created by LiuXuan on 2017/2/13.
+//  Copyright © 2017年 Xuan. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#ifdef __OBJC__
+    #import <UIKit/UIKit.h>
+    #import <dlfcn.h>
+#endif
+
+#ifdef SUPPORTS_UNDOCUMENTED_API
+    #define PRIVATE_PATH "/System/Library/PrivateFrameworks/CoreTelephony.framework/CoreTelephony"
+    #define SBSERVPATH   "/System/Library/PrivateFrameworks/SpringBoardServices.framework/SpringBoardServices"
+    #define UIKITPATH    "/System/Library/Framework/UIKit.framework/UIKit"
+    #define SBFAPPPATH   "/System/Library/PrivateFrameworks/SpringBoardFoundation.framework/SpringBoardFoundation/SBFApplication"
+#endif
+
+#define kSCREENWIDTH    (MIN([UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height))
+#define kSCREENHEIGHT   (MAX([UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height))
+
+#endif /* PrefixHeader_pch */
